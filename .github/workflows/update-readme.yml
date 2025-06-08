@@ -1,0 +1,64 @@
+name: 🔄 Auto Update Profile README
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # runs every 6 hours (more reasonable than 10 minutes)
+  workflow_dispatch:       # allows manual triggering
+  push:
+    branches: [ main ]     # also runs on push to main branch
+    paths-ignore:
+      - 'README.md'        # don't trigger on README changes to avoid loops
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write      # explicit permission for pushing changes
+      
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4  # updated to v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0   # fetch full history for better git operations
+          
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # specific version for consistency
+          cache: 'pip'             # cache pip dependencies
+          
+      - name: 📦 Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests python-dotenv PyGithub
+          
+      - name: 📊 Update README with Profile Stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 update_readme.py
+        
+      - name: 🔍 Check for Changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: 💾 Commit & Push Changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "🤖 Auto-update README stats [$(date +'%Y-%m-%d %H:%M:%S')]"
+          git push
+          
+      - name: 📝 Summary
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: echo "✅ README successfully updated with latest profile stats!"
