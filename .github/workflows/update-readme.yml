@@ -2,7 +2,7 @@ name: 🔄 Auto Update Profile README
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # runs every 6 hours (more reasonable than 10 minutes)
+    - cron: '0 8,20 * * *'  # runs twice daily at 8 AM and 8 PM UTC
   workflow_dispatch:       # allows manual triggering
   push:
     branches: [ main ]     # also runs on push to main branch
