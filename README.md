@@ -3,57 +3,99 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=ABHIJEET%20SWAMI&fontSize=42&fontColor=00FFFF&animation=twinkling&fontAlignY=32&desc=AI%20%7C%20ML%20%7C%20CODE%20ARCHITECT&descAlignY=51&descAlign=50"/>
 </div>
 
-<!-- 🎮 DEBUG FIGHTER - BATTLE VISUALIZATION -->
+<!-- 🎮 DEBUG FIGHTER - ANIMATED BATTLE SCENE -->
 <div align="center">
   <h2>🛩️ DEBUG FIGHTER - ELIMINATING CODE BUGS! 🐛</h2>
-  <p><em>Automated bug elimination system in action!</em></p>
+  <p><em>Watch the airplane hunt down and eliminate different types of code bugs!</em></p>
 
-  <!-- Battle Scene Visualization -->
-  <table>
-    <tr>
-      <td align="center" width="20%">
-        <h3>🛩️ FIGHTER</h3>
-        <p style="font-size: 3em;">✈️</p>
-        <p><strong>Debug Hunter</strong></p>
-        <p>Status: <span style="color: green;">ACTIVE</span></p>
-      </td>
-      <td align="center" width="20%">
-        <h3>⚡ LASER</h3>
-        <p style="font-size: 3em;">💥</p>
-        <p><strong>Targeting System</strong></p>
-        <p>Mode: <span style="color: cyan;">PRECISION</span></p>
-      </td>
-      <td align="center" width="20%">
-        <h3>🐛 SYNTAX</h3>
-        <p style="font-size: 3em;">🔴</p>
-        <p><strong>Error Bug</strong></p>
-        <p>Status: <span style="color: red;">ELIMINATED</span></p>
-      </td>
-      <td align="center" width="20%">
-        <h3>🐛 LOGIC</h3>
-        <p style="font-size: 3em;">🟠</p>
-        <p><strong>Error Bug</strong></p>
-        <p>Status: <span style="color: orange;">ELIMINATED</span></p>
-      </td>
-      <td align="center" width="20%">
-        <h3>🐛 RUNTIME</h3>
-        <p style="font-size: 3em;">🟣</p>
-        <p><strong>Error Bug</strong></p>
-        <p>Status: <span style="color: purple;">ELIMINATED</span></p>
-      </td>
-    </tr>
-  </table>
+  <svg width="800" height="300" viewBox="0 0 800 300">
+    <!-- Background -->
+    <rect width="800" height="300" fill="#0a0a0a" stroke="#00FFFF" stroke-width="2" rx="10"/>
 
-  <!-- Mission Status -->
-  <div style="border: 2px solid #00FFFF; border-radius: 10px; padding: 20px; margin: 20px; background-color: #0a0a0a;">
-    <h3 style="color: #00FFFF;">🎯 MISSION STATUS</h3>
-    <p style="color: #FFFFFF;">
-      <strong>Operation:</strong> Automated Bug Elimination<br>
-      <strong>Target Types:</strong> Syntax | Logic | Runtime Errors<br>
-      <strong>Elimination Rate:</strong> 99.7% Success<br>
-      <strong>System Status:</strong> <span style="color: #00FF00;">FULLY OPERATIONAL</span>
-    </p>
-  </div>
+    <!-- Stars -->
+    <circle cx="100" cy="50" r="1" fill="white">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="80" r="1" fill="white">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="40" r="1" fill="white">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="70" r="1" fill="white">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="60" r="1" fill="white">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="90" r="1" fill="white">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Airplane -->
+    <g>
+      <polygon points="50,150 90,160 85,150 90,140" fill="#00FFFF" stroke="white" stroke-width="1">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2s" repeatCount="indefinite"/>
+      </polygon>
+      <circle cx="95" cy="150" r="2" fill="#FF073A">
+        <animate attributeName="r" values="1;3;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Engine Trail -->
+      <line x1="40" y1="150" x2="20" y2="150" stroke="#00FFFF" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Laser Beams -->
+    <line x1="95" y1="150" x2="550" y2="80" stroke="#00FFFF" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="95" y1="150" x2="450" y2="220" stroke="#00FFFF" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="95" y1="150" x2="650" y2="180" stroke="#00FFFF" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="5s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Bug 1: Syntax Error -->
+    <g>
+      <circle cx="550" cy="80" r="12" fill="#FF073A" opacity="0.8">
+        <animate attributeName="r" values="10;15;10" dur="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -15,8; 0,0; 15,-8; 0,0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.3s" begin="1s" repeatCount="1"/>
+      </circle>
+      <text x="550" y="85" text-anchor="middle" fill="white" font-size="8" font-family="monospace">SYN</text>
+    </g>
+
+    <!-- Bug 2: Logic Error -->
+    <g>
+      <circle cx="450" cy="220" r="12" fill="#FFA500" opacity="0.8">
+        <animate attributeName="r" values="10;15;10" dur="2.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 20,-10; 0,0; -20,10; 0,0" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.3s" begin="3s" repeatCount="1"/>
+      </circle>
+      <text x="450" y="225" text-anchor="middle" fill="white" font-size="8" font-family="monospace">LOG</text>
+    </g>
+
+    <!-- Bug 3: Runtime Error -->
+    <g>
+      <circle cx="650" cy="180" r="12" fill="#9400D3" opacity="0.8">
+        <animate attributeName="r" values="10;15;10" dur="1.8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -18,15; 0,0; 18,-15; 0,0" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.3s" begin="5s" repeatCount="1"/>
+      </circle>
+      <text x="650" y="185" text-anchor="middle" fill="white" font-size="8" font-family="monospace">RUN</text>
+    </g>
+
+    <!-- Status Display -->
+    <rect x="10" y="10" width="140" height="50" fill="black" stroke="#00FFFF" stroke-width="1" rx="5" opacity="0.8"/>
+    <text x="15" y="25" fill="#00FFFF" font-size="10" font-family="monospace">DEBUG STATUS:</text>
+    <text x="15" y="38" fill="#FF073A" font-size="9" font-family="monospace">🎯 HUNTING BUGS...</text>
+    <text x="15" y="50" fill="#00FF00" font-size="9" font-family="monospace">✅ SYSTEM ACTIVE</text>
+
+    <!-- Mission Info -->
+    <text x="400" y="290" text-anchor="middle" fill="#00FFFF" font-size="12" font-family="monospace">🚀 Automated Bug Elimination in Progress...</text>
+  </svg>
 
   <p align="center">
     <img src="https://img.shields.io/badge/Mission-Debug%20Fighter-FF073A?style=for-the-badge&logo=target&logoColor=white" alt="Mission"/>
@@ -101,15 +143,15 @@
       <td width="50%" align="left">
         <h3>🧬 SYSTEM SPECIFICATIONS</h3>
 
-        <p>
-          <strong>▶ Core Function:</strong> AI & ML Engineer<br>
-          <strong>▶ Education Module:</strong> B-Tech CSE (AI & ML)<br>
-          <strong>▶ Institution:</strong> JC Bose University<br>
-          <strong>▶ Specialization:</strong> Python | GenAI | Cloud<br>
-          <strong>▶ Achievement Level:</strong> Hackathon Winner 🏆<br>
-          <strong>▶ Current Mission:</strong> Blockchain & IoT Integration<br>
-          <strong>▶ Optimization Focus:</strong> ML Model Scalability<br>
-        </p>
+        <ul>
+          <li><strong>▶ Core Function:</strong> AI & ML Engineer</li>
+          <li><strong>▶ Education Module:</strong> B-Tech CSE (AI & ML)</li>
+          <li><strong>▶ Institution:</strong> JC Bose University</li>
+          <li><strong>▶ Specialization:</strong> Python | GenAI | Cloud</li>
+          <li><strong>▶ Achievement Level:</strong> Hackathon Winner 🏆</li>
+          <li><strong>▶ Current Mission:</strong> Blockchain & IoT Integration</li>
+          <li><strong>▶ Optimization Focus:</strong> ML Model Scalability</li>
+        </ul>
 
         <p align="center">
           <img src="https://img.shields.io/badge/Status-Online-00FF00?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status"/>
@@ -560,5 +602,5 @@
   <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
-*Last updated: 2025-08-03 15:54:54 UTC*
+*Last updated: 2025-08-03 19:33:18 UTC*
 <!-- GITHUB-STATS:END -->

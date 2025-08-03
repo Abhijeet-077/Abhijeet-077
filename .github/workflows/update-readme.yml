@@ -61,6 +61,31 @@ jobs:
           git commit -m "🤖 Auto-update README stats [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push
           
+      - name: 📧 Send Email Notification
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "🤖 GitHub Profile README Auto-Updated Successfully"
+          to: ${{ secrets.EMAIL_TO }}
+          from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
+          html_body: |
+            <h2>🚀 GitHub Profile README Update Notification</h2>
+            <p><strong>Repository:</strong> ${{ github.repository }}</p>
+            <p><strong>Update Time:</strong> $(date +'%Y-%m-%d %H:%M:%S UTC')</p>
+            <p><strong>Status:</strong> ✅ Successfully Updated</p>
+            <p><strong>Changes:</strong> Latest GitHub statistics and profile data have been automatically updated.</p>
+            <hr>
+            <p><strong>🎯 Debug Fighter Status:</strong> All systems operational</p>
+            <p><strong>📊 Analytics:</strong> GitHub stats refreshed</p>
+            <p><strong>🔄 Next Update:</strong> Scheduled for next automated run (twice daily at 8 AM & 8 PM UTC)</p>
+            <hr>
+            <p><em>This is an automated notification from your GitHub Profile README update system.</em></p>
+            <p><a href="https://github.com/${{ github.repository }}">View Updated Profile</a></p>
+
       - name: 📝 Summary
         if: steps.verify-changed-files.outputs.changed == 'true'
-        run: echo "✅ README successfully updated with latest profile stats!"
+        run: echo "✅ README successfully updated with latest profile stats and email notification sent!"
