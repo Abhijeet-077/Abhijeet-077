@@ -3,13 +3,22 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=ABHIJEET%20SWAMI&fontSize=42&fontColor=00FFFF&animation=twinkling&fontAlignY=32&desc=AI%20%7C%20ML%20%7C%20CODE%20ARCHITECT&descAlignY=51&descAlign=50"/>
 </div>
 
-<!-- 🎮 INTERACTIVE AIRPLANE SHOOTING GAME -->
+<!-- 🎮 DEBUG FIGHTER - ANIMATED BATTLE SCENE -->
 <div align="center">
-  <h2>🛩️ DEBUG FIGHTER - SHOOT THE BUGS! 🐛</h2>
-  <p><em>Click on the bugs to debug them! Help the airplane eliminate code bugs!</em></p>
+  <h2>🛩️ DEBUG FIGHTER - ELIMINATING CODE BUGS! 🐛</h2>
+  <p><em>Watch the airplane hunt down and eliminate different types of code bugs!</em></p>
 
-  <svg width="800" height="400" viewBox="0 0 800 400" style="border: 2px solid #00FFFF; border-radius: 15px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);">
-    <!-- Background Stars -->
+  <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <defs>
+      <radialGradient id="spaceGradient" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      </radialGradient>
+    </defs>
+    <rect width="800" height="400" fill="url(#spaceGradient)" stroke="#00FFFF" stroke-width="2" rx="15"/>
+
+    <!-- Animated Background Stars -->
     <circle cx="100" cy="50" r="1" fill="#FFFFFF" opacity="0.8">
       <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
     </circle>
@@ -29,113 +38,97 @@
       <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Airplane (Player) -->
-    <g id="airplane" transform="translate(50, 200)">
-      <polygon points="0,0 40,10 35,0 40,-10" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1">
+    <!-- Airplane (Debug Hunter) -->
+    <g>
+      <polygon points="50,200 90,210 85,200 90,190" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1">
         <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="2s" repeatCount="indefinite"/>
       </polygon>
-      <circle cx="45" cy="0" r="3" fill="#FF073A">
+      <circle cx="95" cy="200" r="3" fill="#FF073A">
         <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite"/>
       </circle>
       <!-- Airplane Trail -->
-      <line x1="-10" y1="0" x2="-30" y2="0" stroke="#00FFFF" stroke-width="2" opacity="0.6">
+      <line x1="40" y1="200" x2="20" y2="200" stroke="#00FFFF" stroke-width="2" opacity="0.6">
         <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
       </line>
     </g>
 
-    <!-- Bug 1: Syntax Error Bug -->
-    <g id="bug1" onclick="shootBug(1)" style="cursor: pointer;" transform="translate(600, 100)">
-      <circle cx="0" cy="0" r="15" fill="#FF073A" opacity="0.8">
+    <!-- Laser Beams (Animated) -->
+    <line x1="95" y1="200" x2="580" y2="100" stroke="#00FFFF" stroke-width="3" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="95" y1="200" x2="480" y2="300" stroke="#00FFFF" stroke-width="3" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="95" y1="200" x2="680" y2="250" stroke="#00FFFF" stroke-width="3" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="5s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Bug 1: Syntax Error (Red) -->
+    <g>
+      <circle cx="600" cy="100" r="15" fill="#FF073A" opacity="0.8">
         <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
         <animateTransform attributeName="transform" type="translate" values="0,0; -20,10; 0,0; 20,-10; 0,0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.5s" begin="1s" repeatCount="1"/>
       </circle>
-      <text x="0" y="5" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">SYN</text>
+      <text x="600" y="105" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">SYN</text>
       <!-- Bug Wings -->
-      <ellipse cx="-12" cy="-8" rx="8" ry="3" fill="#FF073A" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0;15;0;-15;0" dur="0.5s" repeatCount="indefinite"/>
+      <ellipse cx="588" cy="92" rx="8" ry="3" fill="#FF073A" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 588 92;15 588 92;0 588 92;-15 588 92;0 588 92" dur="0.5s" repeatCount="indefinite"/>
       </ellipse>
-      <ellipse cx="12" cy="-8" rx="8" ry="3" fill="#FF073A" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0;-15;0;15;0" dur="0.5s" repeatCount="indefinite"/>
+      <ellipse cx="612" cy="92" rx="8" ry="3" fill="#FF073A" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 612 92;-15 612 92;0 612 92;15 612 92;0 612 92" dur="0.5s" repeatCount="indefinite"/>
       </ellipse>
     </g>
 
-    <!-- Bug 2: Logic Error Bug -->
-    <g id="bug2" onclick="shootBug(2)" style="cursor: pointer;" transform="translate(500, 300)">
-      <circle cx="0" cy="0" r="15" fill="#FFA500" opacity="0.8">
+    <!-- Bug 2: Logic Error (Orange) -->
+    <g>
+      <circle cx="500" cy="300" r="15" fill="#FFA500" opacity="0.8">
         <animate attributeName="r" values="12;18;12" dur="2.5s" repeatCount="indefinite"/>
         <animateTransform attributeName="transform" type="translate" values="0,0; 30,-15; 0,0; -30,15; 0,0" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.5s" begin="3s" repeatCount="1"/>
       </circle>
-      <text x="0" y="5" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">LOG</text>
+      <text x="500" y="305" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">LOG</text>
       <!-- Bug Wings -->
-      <ellipse cx="-12" cy="-8" rx="8" ry="3" fill="#FFA500" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0;15;0;-15;0" dur="0.6s" repeatCount="indefinite"/>
+      <ellipse cx="488" cy="292" rx="8" ry="3" fill="#FFA500" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 488 292;15 488 292;0 488 292;-15 488 292;0 488 292" dur="0.6s" repeatCount="indefinite"/>
       </ellipse>
-      <ellipse cx="12" cy="-8" rx="8" ry="3" fill="#FFA500" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0;-15;0;15;0" dur="0.6s" repeatCount="indefinite"/>
+      <ellipse cx="512" cy="292" rx="8" ry="3" fill="#FFA500" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 512 292;-15 512 292;0 512 292;15 512 292;0 512 292" dur="0.6s" repeatCount="indefinite"/>
       </ellipse>
     </g>
 
-    <!-- Bug 3: Runtime Error Bug -->
-    <g id="bug3" onclick="shootBug(3)" style="cursor: pointer;" transform="translate(700, 250)">
-      <circle cx="0" cy="0" r="15" fill="#9400D3" opacity="0.8">
+    <!-- Bug 3: Runtime Error (Purple) -->
+    <g>
+      <circle cx="700" cy="250" r="15" fill="#9400D3" opacity="0.8">
         <animate attributeName="r" values="12;18;12" dur="1.8s" repeatCount="indefinite"/>
         <animateTransform attributeName="transform" type="translate" values="0,0; -25,20; 0,0; 25,-20; 0,0" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.5s" begin="5s" repeatCount="1"/>
       </circle>
-      <text x="0" y="5" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">RUN</text>
+      <text x="700" y="255" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">RUN</text>
       <!-- Bug Wings -->
-      <ellipse cx="-12" cy="-8" rx="8" ry="3" fill="#9400D3" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0;15;0;-15;0" dur="0.4s" repeatCount="indefinite"/>
+      <ellipse cx="688" cy="242" rx="8" ry="3" fill="#9400D3" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 688 242;15 688 242;0 688 242;-15 688 242;0 688 242" dur="0.4s" repeatCount="indefinite"/>
       </ellipse>
-      <ellipse cx="12" cy="-8" rx="8" ry="3" fill="#9400D3" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0;-15;0;15;0" dur="0.4s" repeatCount="indefinite"/>
+      <ellipse cx="712" cy="242" rx="8" ry="3" fill="#9400D3" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 712 242;-15 712 242;0 712 242;15 712 242;0 712 242" dur="0.4s" repeatCount="indefinite"/>
       </ellipse>
     </g>
 
-    <!-- Score Display -->
-    <rect x="10" y="10" width="120" height="40" fill="#000000" stroke="#00FFFF" stroke-width="2" rx="5"/>
-    <text x="20" y="25" fill="#00FFFF" font-size="12" font-family="monospace">BUGS FIXED:</text>
-    <text x="20" y="40" fill="#FF073A" font-size="16" font-family="monospace" font-weight="bold" id="score">0</text>
+    <!-- Status Display -->
+    <rect x="10" y="10" width="150" height="60" fill="#000000" stroke="#00FFFF" stroke-width="2" rx="5" opacity="0.8"/>
+    <text x="20" y="30" fill="#00FFFF" font-size="12" font-family="monospace">DEBUG STATUS:</text>
+    <text x="20" y="45" fill="#FF073A" font-size="11" font-family="monospace">🎯 HUNTING BUGS...</text>
+    <text x="20" y="60" fill="#00FF00" font-size="11" font-family="monospace">✅ SYSTEM ACTIVE</text>
 
-    <!-- Game Instructions -->
-    <text x="400" y="380" text-anchor="middle" fill="#00FFFF" font-size="14" font-family="monospace">🎯 Click on the flying bugs to debug them!</text>
+    <!-- Mission Info -->
+    <text x="400" y="380" text-anchor="middle" fill="#00FFFF" font-size="14" font-family="monospace">🚀 Automated Bug Elimination in Progress...</text>
   </svg>
 
-  <script>
-    let score = 0;
-    function shootBug(bugId) {
-      score++;
-      document.getElementById('score').textContent = score;
-
-      // Create laser effect
-      const bug = document.getElementById('bug' + bugId);
-      const laser = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      laser.setAttribute('x1', '95');
-      laser.setAttribute('y1', '200');
-      laser.setAttribute('x2', bug.getAttribute('transform').match(/\d+/)[0]);
-      laser.setAttribute('y2', bug.getAttribute('transform').match(/\d+/g)[1]);
-      laser.setAttribute('stroke', '#00FFFF');
-      laser.setAttribute('stroke-width', '3');
-      laser.setAttribute('opacity', '1');
-
-      bug.parentNode.appendChild(laser);
-
-      // Animate laser
-      laser.animate([
-        { opacity: 1 },
-        { opacity: 0 }
-      ], { duration: 300 });
-
-      // Bug explosion effect
-      bug.style.transform += ' scale(1.5)';
-      bug.style.opacity = '0.3';
-
-      setTimeout(() => {
-        laser.remove();
-        bug.style.transform = bug.style.transform.replace(' scale(1.5)', '');
-        bug.style.opacity = '0.8';
-      }, 300);
-    }
-  </script>
+  <p align="center">
+    <img src="https://img.shields.io/badge/Mission-Debug%20Fighter-FF073A?style=for-the-badge&logo=target&logoColor=white" alt="Mission"/>
+    <img src="https://img.shields.io/badge/Status-Hunting%20Bugs-00FFFF?style=for-the-badge&logo=bug&logoColor=white" alt="Status"/>
+    <img src="https://img.shields.io/badge/Eliminated-Syntax%20%7C%20Logic%20%7C%20Runtime-9400D3?style=for-the-badge&logo=checkmark&logoColor=white" alt="Eliminated"/>
+  </p>
 </div>
 
 <!-- 🌟 ENHANCED SOCIAL CONNECTIONS -->
@@ -159,12 +152,12 @@
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 </div>
 
-<!-- 🚀 ABOUT ME - FUTURISTIC PROFILE -->
+<!-- 🚀 ABOUT ME - NEURAL ARCHITECT -->
 <div align="center">
   <h1>
-    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35">
-    <span style="background: linear-gradient(45deg, #00FFFF, #FF073A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5em; font-weight: bold;">NEURAL ARCHITECT</span>
-    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35">
+    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35" alt="Wave">
+    🧠 NEURAL ARCHITECT 🧠
+    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35" alt="Wave">
   </h1>
 </div>
 
@@ -174,25 +167,23 @@
       <td width="50%">
         <img align="center" height="300px" width="400px" alt="Coding Animation" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExczc2anJvOW8xbXJ2aHV6NHV1cDJvY2I5cHhiNTkzMHlnbGlod2Q0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVik7pBtu9dNS/giphy.gif" />
       </td>
-      <td width="50%">
-        <div align="left" style="padding: 20px;">
-          <h3 style="color: #00FFFF; font-family: 'Orbitron', monospace;">🧬 SYSTEM SPECIFICATIONS</h3>
+      <td width="50%" align="left">
+        <h3>🧬 SYSTEM SPECIFICATIONS</h3>
 
-          <p style="font-family: 'JetBrains Mono', monospace; line-height: 1.8;">
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Core Function:</strong> AI & ML Engineer<br>
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Education Module:</strong> B-Tech CSE (AI & ML)<br>
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Institution:</strong> JC Bose University<br>
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Specialization:</strong> Python | GenAI | Cloud<br>
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Achievement Level:</strong> Hackathon Winner 🏆<br>
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Current Mission:</strong> Blockchain & IoT Integration<br>
-            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Optimization Focus:</strong> ML Model Scalability
-          </p>
+        <p>
+          <strong>▶ Core Function:</strong> AI & ML Engineer<br>
+          <strong>▶ Education Module:</strong> B-Tech CSE (AI & ML)<br>
+          <strong>▶ Institution:</strong> JC Bose University<br>
+          <strong>▶ Specialization:</strong> Python | GenAI | Cloud<br>
+          <strong>▶ Achievement Level:</strong> Hackathon Winner 🏆<br>
+          <strong>▶ Current Mission:</strong> Blockchain & IoT Integration<br>
+          <strong>▶ Optimization Focus:</strong> ML Model Scalability<br>
+        </p>
 
-          <div style="margin-top: 20px;">
-            <img src="https://img.shields.io/badge/Status-Online-00FF00?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status"/>
-            <img src="https://img.shields.io/badge/Mode-Innovation-FF073A?style=for-the-badge&logo=rocket&logoColor=white" alt="Mode"/>
-          </div>
-        </div>
+        <p align="center">
+          <img src="https://img.shields.io/badge/Status-Online-00FF00?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status"/>
+          <img src="https://img.shields.io/badge/Mode-Innovation-FF073A?style=for-the-badge&logo=rocket&logoColor=white" alt="Mode"/>
+        </p>
       </td>
     </tr>
   </table>
@@ -561,5 +552,5 @@
   <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
-*Last updated: 2025-08-03 15:20:00 UTC*
+*Last updated: 2025-08-03 15:33:23 UTC*
 <!-- GITHUB-STATS:END -->
