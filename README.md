@@ -358,3 +358,9 @@
 │              └─ MLflow deployment time reduction (2 days → 4 hrs)  │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
+
+---
+
+<!-- GITHUB-STATS:START -->
+<!-- This section will be automatically updated by GitHub Actions -->
+<!-- GITHUB-STATS:END -->
