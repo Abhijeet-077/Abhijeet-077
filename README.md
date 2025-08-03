@@ -3,106 +3,7 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=ABHIJEET%20SWAMI&fontSize=42&fontColor=00FFFF&animation=twinkling&fontAlignY=32&desc=AI%20%7C%20ML%20%7C%20CODE%20ARCHITECT&descAlignY=51&descAlign=50"/>
 </div>
 
-<!-- 🎮 DEBUG FIGHTER - ANIMATED BATTLE SCENE -->
-<div align="center">
-  <h2>🛩️ DEBUG FIGHTER - ELIMINATING CODE BUGS! 🐛</h2>
-  <p><em>Watch the airplane hunt down and eliminate different types of code bugs!</em></p>
 
-  <svg width="800" height="300" viewBox="0 0 800 300">
-    <!-- Background -->
-    <rect width="800" height="300" fill="#0a0a0a" stroke="#00FFFF" stroke-width="2" rx="10"/>
-
-    <!-- Stars -->
-    <circle cx="100" cy="50" r="1" fill="white">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="200" cy="80" r="1" fill="white">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="300" cy="40" r="1" fill="white">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="500" cy="70" r="1" fill="white">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="650" cy="60" r="1" fill="white">
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="750" cy="90" r="1" fill="white">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Airplane -->
-    <g>
-      <polygon points="50,150 90,160 85,150 90,140" fill="#00FFFF" stroke="white" stroke-width="1">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2s" repeatCount="indefinite"/>
-      </polygon>
-      <circle cx="95" cy="150" r="2" fill="#FF073A">
-        <animate attributeName="r" values="1;3;1" dur="1s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Engine Trail -->
-      <line x1="40" y1="150" x2="20" y2="150" stroke="#00FFFF" stroke-width="2" opacity="0.6">
-        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
-      </line>
-    </g>
-
-    <!-- Laser Beams -->
-    <line x1="95" y1="150" x2="550" y2="80" stroke="#00FFFF" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="1s" repeatCount="indefinite"/>
-    </line>
-    <line x1="95" y1="150" x2="450" y2="220" stroke="#00FFFF" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="3s" repeatCount="indefinite"/>
-    </line>
-    <line x1="95" y1="150" x2="650" y2="180" stroke="#00FFFF" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="5s" repeatCount="indefinite"/>
-    </line>
-
-    <!-- Bug 1: Syntax Error -->
-    <g>
-      <circle cx="550" cy="80" r="12" fill="#FF073A" opacity="0.8">
-        <animate attributeName="r" values="10;15;10" dur="2s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0,0; -15,8; 0,0; 15,-8; 0,0" dur="4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.3s" begin="1s" repeatCount="1"/>
-      </circle>
-      <text x="550" y="85" text-anchor="middle" fill="white" font-size="8" font-family="monospace">SYN</text>
-    </g>
-
-    <!-- Bug 2: Logic Error -->
-    <g>
-      <circle cx="450" cy="220" r="12" fill="#FFA500" opacity="0.8">
-        <animate attributeName="r" values="10;15;10" dur="2.5s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0,0; 20,-10; 0,0; -20,10; 0,0" dur="5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.3s" begin="3s" repeatCount="1"/>
-      </circle>
-      <text x="450" y="225" text-anchor="middle" fill="white" font-size="8" font-family="monospace">LOG</text>
-    </g>
-
-    <!-- Bug 3: Runtime Error -->
-    <g>
-      <circle cx="650" cy="180" r="12" fill="#9400D3" opacity="0.8">
-        <animate attributeName="r" values="10;15;10" dur="1.8s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0,0; -18,15; 0,0; 18,-15; 0,0" dur="3.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.3s" begin="5s" repeatCount="1"/>
-      </circle>
-      <text x="650" y="185" text-anchor="middle" fill="white" font-size="8" font-family="monospace">RUN</text>
-    </g>
-
-    <!-- Status Display -->
-    <rect x="10" y="10" width="140" height="50" fill="black" stroke="#00FFFF" stroke-width="1" rx="5" opacity="0.8"/>
-    <text x="15" y="25" fill="#00FFFF" font-size="10" font-family="monospace">DEBUG STATUS:</text>
-    <text x="15" y="38" fill="#FF073A" font-size="9" font-family="monospace">🎯 HUNTING BUGS...</text>
-    <text x="15" y="50" fill="#00FF00" font-size="9" font-family="monospace">✅ SYSTEM ACTIVE</text>
-
-    <!-- Mission Info -->
-    <text x="400" y="290" text-anchor="middle" fill="#00FFFF" font-size="12" font-family="monospace">🚀 Automated Bug Elimination in Progress...</text>
-  </svg>
-
-  <p align="center">
-    <img src="https://img.shields.io/badge/Mission-Debug%20Fighter-FF073A?style=for-the-badge&logo=target&logoColor=white" alt="Mission"/>
-    <img src="https://img.shields.io/badge/Status-Hunting%20Bugs-00FFFF?style=for-the-badge&logo=bug&logoColor=white" alt="Status"/>
-    <img src="https://img.shields.io/badge/Eliminated-Syntax%20%7C%20Logic%20%7C%20Runtime-9400D3?style=for-the-badge&logo=checkmark&logoColor=white" alt="Eliminated"/>
-  </p>
-</div>
 
 <!-- 🌟 ENHANCED SOCIAL CONNECTIONS -->
 <div align="center">
@@ -164,9 +65,7 @@
 
 <!-- 🏆 ACHIEVEMENT MATRIX -->
 <div align="center">
-  <h2 style="color: #FF073A; font-family: 'Orbitron', monospace;">
-    🏆 ACHIEVEMENT MATRIX 🏆
-  </h2>
+  <h2>🏆 ACHIEVEMENT MATRIX 🏆</h2>
   <img src="https://github-profile-trophy.vercel.app/?username=Abhijeet-077&theme=radical&row=2&column=4&margin-w=15&margin-h=15&no-frame=true" alt="GitHub Trophies" />
 </div>
 
@@ -177,9 +76,7 @@
 
 <!-- 📊 ENHANCED DEVELOPER ANALYTICS -->
 <div align="center">
-  <h2 style="background: linear-gradient(45deg, #00FFFF, #FF073A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2em; font-family: 'Orbitron', monospace;">
-    📊 NEURAL NETWORK ANALYTICS
-  </h2>
+  <h2>📊 NEURAL NETWORK ANALYTICS</h2>
 </div>
 
 <!-- Activity Graph -->
@@ -213,36 +110,28 @@
 
 <!-- 🛠️ NEURAL TECH STACK -->
 <div align="center">
-  <h2 style="background: linear-gradient(45deg, #FF073A, #00FFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2em; font-family: 'Orbitron', monospace;">
-    🛠️ NEURAL TECH STACK
-  </h2>
+  <h2>🛠️ NEURAL TECH STACK</h2>
 </div>
 
 <div align="center">
   <table>
     <tr>
       <td width="33%" align="center">
-        <h3 style="color: #00FFFF; font-family: 'JetBrains Mono', monospace;">
-          🧠 AI/ML CORE
-        </h3>
+        <h3>🧠 AI/ML CORE</h3>
         <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn&theme=dark" alt="AI/ML Stack" /><br>
         <img src="https://img.shields.io/badge/XGBoost-4FBFA7?style=flat-square&logo=xgboost&logoColor=white" alt="XGBoost" />
         <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
         <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
       </td>
       <td width="33%" align="center">
-        <h3 style="color: #FF073A; font-family: 'JetBrains Mono', monospace;">
-          ☁️ CLOUD MATRIX
-        </h3>
+        <h3>☁️ CLOUD MATRIX</h3>
         <img src="https://skillicons.dev/icons?i=aws,azure,gcp,docker&theme=dark" alt="Cloud Stack" /><br>
         <img src="https://img.shields.io/badge/IBM_Watson-BE95FF?style=flat-square&logo=ibm&logoColor=white" alt="IBM Watson" />
         <img src="https://img.shields.io/badge/CI/CD-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="CI/CD" />
         <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
       </td>
       <td width="33%" align="center">
-        <h3 style="color: #9400D3; font-family: 'JetBrains Mono', monospace;">
-          🔧 DEV ARSENAL
-        </h3>
+        <h3>🔧 DEV ARSENAL</h3>
         <img src="https://skillicons.dev/icons?i=git,github,vscode,linux&theme=dark" alt="Dev Tools" /><br>
         <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=flat-square&logo=github&logoColor=white" alt="GitHub Copilot" />
         <img src="https://img.shields.io/badge/Cursor_AI-5143EC?style=flat-square&logo=cursor&logoColor=white" alt="Cursor AI" />
@@ -254,31 +143,27 @@
 
 <!-- 🎯 SKILL PROFICIENCY RADAR -->
 <div align="center">
-  <h3 style="color: #00FFFF; font-family: 'Orbitron', monospace;">⚡ SKILL PROFICIENCY MATRIX</h3>
+  <h3>⚡ SKILL PROFICIENCY MATRIX</h3>
 
   <table>
     <tr>
       <td align="center">
-        <strong style="color: #FF073A;">Machine Learning</strong><br>
-        <progress value="95" max="100" style="width: 200px; height: 20px;"></progress><br>
-        <span style="color: #00FFFF; font-family: monospace;">95%</span>
+        <strong>Machine Learning</strong><br>
+        <img src="https://img.shields.io/badge/Skill_Level-95%25-brightgreen?style=for-the-badge" alt="Machine Learning 95%"/><br>
       </td>
       <td align="center">
-        <strong style="color: #FF073A;">Python Development</strong><br>
-        <progress value="90" max="100" style="width: 200px; height: 20px;"></progress><br>
-        <span style="color: #00FFFF; font-family: monospace;">90%</span>
+        <strong>Python Development</strong><br>
+        <img src="https://img.shields.io/badge/Skill_Level-90%25-brightgreen?style=for-the-badge" alt="Python Development 90%"/><br>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <strong style="color: #FF073A;">Cloud Architecture</strong><br>
-        <progress value="85" max="100" style="width: 200px; height: 20px;"></progress><br>
-        <span style="color: #00FFFF; font-family: monospace;">85%</span>
+        <strong>Cloud Architecture</strong><br>
+        <img src="https://img.shields.io/badge/Skill_Level-85%25-green?style=for-the-badge" alt="Cloud Architecture 85%"/><br>
       </td>
       <td align="center">
-        <strong style="color: #FF073A;">GenAI & LLMs</strong><br>
-        <progress value="88" max="100" style="width: 200px; height: 20px;"></progress><br>
-        <span style="color: #00FFFF; font-family: monospace;">88%</span>
+        <strong>GenAI & LLMs</strong><br>
+        <img src="https://img.shields.io/badge/Skill_Level-88%25-brightgreen?style=for-the-badge" alt="GenAI & LLMs 88%"/><br>
       </td>
     </tr>
   </table>
