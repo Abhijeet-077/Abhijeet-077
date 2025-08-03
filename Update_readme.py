@@ -35,6 +35,7 @@ def main():
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             data = response.json()
+            print(f"✅ Successfully fetched user data for {username}")
 
             # Get recent repositories
             recent_repos = get_recent_repositories(headers, username, 5)
@@ -80,10 +81,12 @@ def main():
             # Update README
             import re
             pattern = r'<!-- GITHUB-STATS:START -->.*?<!-- GITHUB-STATS:END -->'
-            
+
             if re.search(pattern, content, re.DOTALL):
+                print("✅ Found GitHub stats markers, updating content...")
                 updated_content = re.sub(pattern, stats_section, content, flags=re.DOTALL)
             else:
+                print("⚠️ No GitHub stats markers found, appending content...")
                 updated_content = content + "\n\n" + stats_section
             
             # Write updated README
@@ -94,9 +97,12 @@ def main():
             
         else:
             print(f"❌ API Error: {response.status_code}")
-            
+            print(f"Response: {response.text}")
+
     except Exception as e:
         print(f"❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
     main()
