@@ -470,7 +470,10 @@
 - **[Trade-Analysis-bot](https://github.com/Abhijeet-077/Trade-Analysis-bot)** (JavaScript) - No description available *Updated: 2025-07-31*
 - **[Amlgo-chatbot-assignment](https://github.com/Abhijeet-077/Amlgo-chatbot-assignment)** (Python) - No description available *Updated: 2025-07-31*
 
+### 🐍 Contribution Snake
+<div align="center">
+  <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
+</div>
 
-
-*Last updated: 2025-08-03 19:44:18 UTC*
+*Last updated: 2025-08-03 20:28:40 UTC*
 <!-- GITHUB-STATS:END -->
