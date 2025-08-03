@@ -19,20 +19,23 @@ def get_recent_repositories(headers, username, limit=5):
 def main():
     # Get environment variables
     token = os.environ.get('GITHUB_TOKEN')
-    username = os.environ.get('GITHUB_ACTOR')
+    username = os.environ.get('GITHUB_ACTOR', 'Abhijeet-077')  # fallback to hardcoded username
 
     print(f"Username: {username}")
-
-    if not token or not username:
-        print("Error: Missing environment variables")
-        return
+    print(f"Token available: {'Yes' if token else 'No'}")
 
     # Get user data from GitHub API
-    headers = {'Authorization': f'token {token}'}
     url = f'https://api.github.com/users/{username}'
+    headers = {}
+    if token:
+        headers['Authorization'] = f'token {token}'
+
+    print(f"Making API request to: {url}")
+    print(f"Headers: {headers}")
 
     try:
         response = requests.get(url, headers=headers)
+        print(f"Response status: {response.status_code}")
         if response.status_code == 200:
             data = response.json()
             print(f"✅ Successfully fetched user data for {username}")
@@ -46,12 +49,13 @@ def main():
                 repo_showcase = "\n### 🚀 Recent Projects\n"
                 for repo in recent_repos[:3]:  # Show top 3 recent repos
                     repo_name = repo.get('name', 'Unknown')
-                    repo_desc = repo.get('description', 'No description available')[:100]
+                    description = repo.get('description') or 'No description available'
+                    repo_desc = description[:100]
                     repo_url = repo.get('html_url', '#')
                     repo_lang = repo.get('language', 'Unknown')
                     updated = repo.get('updated_at', '')[:10]  # Get date only
 
-                    repo_showcase += f"- **[{repo_name}]({repo_url})** ({repo_lang}) - {repo_desc}{'...' if len(repo.get('description', '')) > 100 else ''} *Updated: {updated}*\n"
+                    repo_showcase += f"- **[{repo_name}]({repo_url})** ({repo_lang}) - {repo_desc}{'...' if len(description) > 100 else ''} *Updated: {updated}*\n"
 
             # Create stats section
             stats_section = f"""<!-- GITHUB-STATS:START -->
@@ -77,14 +81,24 @@ def main():
                     content = f.read()
             except FileNotFoundError:
                 content = f"# {username}'s GitHub Profile\n\nWelcome to my profile!\n\n"
-            
+
+            print(f"README content length: {len(content)}")
+            print(f"Stats section length: {len(stats_section)}")
+            print("Stats section content:")
+            print(repr(stats_section[:200]))
+
             # Update README
             import re
             pattern = r'<!-- GITHUB-STATS:START -->.*?<!-- GITHUB-STATS:END -->'
 
             if re.search(pattern, content, re.DOTALL):
                 print("✅ Found GitHub stats markers, updating content...")
+                match = re.search(pattern, content, re.DOTALL)
+                if match:
+                    print(f"Current content between markers: {repr(match.group()[:100])}")
                 updated_content = re.sub(pattern, stats_section, content, flags=re.DOTALL)
+                print(f"Updated content length: {len(updated_content)}")
+                print(f"Content changed: {len(updated_content) != len(content)}")
             else:
                 print("⚠️ No GitHub stats markers found, appending content...")
                 updated_content = content + "\n\n" + stats_section
