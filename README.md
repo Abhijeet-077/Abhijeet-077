@@ -42,18 +42,6 @@
         <img align="center" height="300px" width="400px" alt="Coding Animation" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExczc2anJvOW8xbXJ2aHV6NHV1cDJvY2I5cHhiNTkzMHlnbGlod2Q0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVik7pBtu9dNS/giphy.gif" />
       </td>
       <td width="50%" align="left">
-        <h3>🧬 SYSTEM SPECIFICATIONS</h3>
-
-        <ul>
-          <li><strong>▶ Core Function:</strong> AI & ML Engineer</li>
-          <li><strong>▶ Education Module:</strong> B-Tech CSE (AI & ML)</li>
-          <li><strong>▶ Institution:</strong> JC Bose University</li>
-          <li><strong>▶ Specialization:</strong> Python | GenAI | Cloud</li>
-          <li><strong>▶ Achievement Level:</strong> Hackathon Winner 🏆</li>
-          <li><strong>▶ Current Mission:</strong> Blockchain & IoT Integration</li>
-          <li><strong>▶ Optimization Focus:</strong> ML Model Scalability</li>
-        </ul>
-
         <p align="center">
           <img src="https://img.shields.io/badge/Status-Online-00FF00?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status"/>
           <img src="https://img.shields.io/badge/Mode-Innovation-FF073A?style=for-the-badge&logo=rocket&logoColor=white" alt="Mode"/>
@@ -482,10 +470,7 @@
 - **[Trade-Analysis-bot](https://github.com/Abhijeet-077/Trade-Analysis-bot)** (JavaScript) - No description available *Updated: 2025-07-31*
 - **[Amlgo-chatbot-assignment](https://github.com/Abhijeet-077/Amlgo-chatbot-assignment)** (Python) - No description available *Updated: 2025-07-31*
 
-### 🐍 Contribution Snake
-<div align="center">
-  <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
-</div>
 
-*Last updated: 2025-08-03 14:06:23 UTC*
+
+*Last updated: 2025-08-03 19:44:18 UTC*
 <!-- GITHUB-STATS:END -->
