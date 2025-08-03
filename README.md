@@ -1,148 +1,329 @@
-<!-- ANIMATED HEADER BANNER WITH CUSTOM STYLING -->
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=40&pause=1000&color=00FFFF&center=true&vCenter=true&random=false&width=600&lines=ABHIJEET+SWAMI;AI+%26+ML+DEVELOPER;CODE+ARCHITECT" alt="Typing SVG" />
-</p>
+<!-- 🚀 FUTURISTIC HEADER WITH NEON AESTHETICS -->
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=ABHIJEET%20SWAMI&fontSize=42&fontColor=00FFFF&animation=twinkling&fontAlignY=32&desc=AI%20%7C%20ML%20%7C%20CODE%20ARCHITECT&descAlignY=51&descAlign=50"/>
+</div>
 
-<p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=FF073A&center=true&vCenter=true&width=435&lines=Machine+Learning+%7C+GenAI+Specialist;Pythonista+%7C+Cloud+Engineer;Full-Stack+Development;Always+Learning%2C+Always+Evolving" alt="Typing SVG" /></a>
-</p>
+<!-- 🎮 INTERACTIVE AIRPLANE SHOOTING GAME -->
+<div align="center">
+  <h2>🛩️ DEBUG FIGHTER - SHOOT THE BUGS! 🐛</h2>
+  <p><em>Click on the bugs to debug them! Help the airplane eliminate code bugs!</em></p>
 
-<!-- SOCIAL BADGES -->
+  <svg width="800" height="400" viewBox="0 0 800 400" style="border: 2px solid #00FFFF; border-radius: 15px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);">
+    <!-- Background Stars -->
+    <circle cx="100" cy="50" r="1" fill="#FFFFFF" opacity="0.8">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="80" r="1" fill="#FFFFFF" opacity="0.6">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="40" r="1" fill="#FFFFFF" opacity="0.7">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="70" r="1" fill="#FFFFFF" opacity="0.9">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="60" r="1" fill="#FFFFFF" opacity="0.5">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="90" r="1" fill="#FFFFFF" opacity="0.8">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Airplane (Player) -->
+    <g id="airplane" transform="translate(50, 200)">
+      <polygon points="0,0 40,10 35,0 40,-10" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="2s" repeatCount="indefinite"/>
+      </polygon>
+      <circle cx="45" cy="0" r="3" fill="#FF073A">
+        <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Airplane Trail -->
+      <line x1="-10" y1="0" x2="-30" y2="0" stroke="#00FFFF" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Bug 1: Syntax Error Bug -->
+    <g id="bug1" onclick="shootBug(1)" style="cursor: pointer;" transform="translate(600, 100)">
+      <circle cx="0" cy="0" r="15" fill="#FF073A" opacity="0.8">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -20,10; 0,0; 20,-10; 0,0" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="5" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">SYN</text>
+      <!-- Bug Wings -->
+      <ellipse cx="-12" cy="-8" rx="8" ry="3" fill="#FF073A" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;15;0;-15;0" dur="0.5s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="12" cy="-8" rx="8" ry="3" fill="#FF073A" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;-15;0;15;0" dur="0.5s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Bug 2: Logic Error Bug -->
+    <g id="bug2" onclick="shootBug(2)" style="cursor: pointer;" transform="translate(500, 300)">
+      <circle cx="0" cy="0" r="15" fill="#FFA500" opacity="0.8">
+        <animate attributeName="r" values="12;18;12" dur="2.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 30,-15; 0,0; -30,15; 0,0" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="5" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">LOG</text>
+      <!-- Bug Wings -->
+      <ellipse cx="-12" cy="-8" rx="8" ry="3" fill="#FFA500" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;15;0;-15;0" dur="0.6s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="12" cy="-8" rx="8" ry="3" fill="#FFA500" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;-15;0;15;0" dur="0.6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Bug 3: Runtime Error Bug -->
+    <g id="bug3" onclick="shootBug(3)" style="cursor: pointer;" transform="translate(700, 250)">
+      <circle cx="0" cy="0" r="15" fill="#9400D3" opacity="0.8">
+        <animate attributeName="r" values="12;18;12" dur="1.8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -25,20; 0,0; 25,-20; 0,0" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="5" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">RUN</text>
+      <!-- Bug Wings -->
+      <ellipse cx="-12" cy="-8" rx="8" ry="3" fill="#9400D3" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;15;0;-15;0" dur="0.4s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="12" cy="-8" rx="8" ry="3" fill="#9400D3" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;-15;0;15;0" dur="0.4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Score Display -->
+    <rect x="10" y="10" width="120" height="40" fill="#000000" stroke="#00FFFF" stroke-width="2" rx="5"/>
+    <text x="20" y="25" fill="#00FFFF" font-size="12" font-family="monospace">BUGS FIXED:</text>
+    <text x="20" y="40" fill="#FF073A" font-size="16" font-family="monospace" font-weight="bold" id="score">0</text>
+
+    <!-- Game Instructions -->
+    <text x="400" y="380" text-anchor="middle" fill="#00FFFF" font-size="14" font-family="monospace">🎯 Click on the flying bugs to debug them!</text>
+  </svg>
+
+  <script>
+    let score = 0;
+    function shootBug(bugId) {
+      score++;
+      document.getElementById('score').textContent = score;
+
+      // Create laser effect
+      const bug = document.getElementById('bug' + bugId);
+      const laser = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      laser.setAttribute('x1', '95');
+      laser.setAttribute('y1', '200');
+      laser.setAttribute('x2', bug.getAttribute('transform').match(/\d+/)[0]);
+      laser.setAttribute('y2', bug.getAttribute('transform').match(/\d+/g)[1]);
+      laser.setAttribute('stroke', '#00FFFF');
+      laser.setAttribute('stroke-width', '3');
+      laser.setAttribute('opacity', '1');
+
+      bug.parentNode.appendChild(laser);
+
+      // Animate laser
+      laser.animate([
+        { opacity: 1 },
+        { opacity: 0 }
+      ], { duration: 300 });
+
+      // Bug explosion effect
+      bug.style.transform += ' scale(1.5)';
+      bug.style.opacity = '0.3';
+
+      setTimeout(() => {
+        laser.remove();
+        bug.style.transform = bug.style.transform.replace(' scale(1.5)', '');
+        bug.style.opacity = '0.8';
+      }, 300);
+    }
+  </script>
+</div>
+
+<!-- 🌟 ENHANCED SOCIAL CONNECTIONS -->
 <div align="center">
   <a href="https://linkedin.com/in/abhijeet-swami">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=000000" alt="LinkedIn"/>
   </a>
   <a href="https://github.com/Abhijeet-077">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000" alt="GitHub"/>
   </a>
   <a href="mailto:abhijeetswami077@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" alt="Email"/>
   </a>
   <a href="https://leetcode.com/abhijeet-swami">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/>
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black&labelColor=000000" alt="LeetCode"/>
   </a>
 </div>
 
-<!-- ANIMATED SEPARATOR -->
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-</p>
-
-<!-- ABOUT ME SECTION -->
-<h1 align="center">
-  <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30">
-  <span style="color:#00FFFF">ABOUT ME</span>
-  <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30">
-</h1>
-
+<!-- 🔥 NEON SEPARATOR -->
 <div align="center">
-  <img align="right" height="270px" width="350px" alt="GIF" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExczc2anJvOW8xbXJ2aHV6NHV1cDJvY2I5cHhiNTkzMHlnbGlod2Q0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVik7pBtu9dNS/giphy.gif" />
-  
-  <p align="left" style="text-align:justify; margin-right:0px; font-family: 'Fira Code', monospace;">
-    <span style="color:#00FFFF; font-weight:bold; font-size:1.2em;">⚡ AI & ML Engineer with a passion for building intelligent systems</span><br><br>
-    🧠 Pursuing <b>B-Tech in CSE (AI & ML)</b> at JC Bose University<br><br>
-    🔮 Specializing in <b>Python, GenAI, and Cloud-based</b> solutions<br><br>
-    🏆 <b>Hackathon winner</b> and <b>innovation competition</b> champion<br><br>
-    🔍 Currently working on <b>blockchain and IoT integration</b> projects<br><br>
-    📊 Experience in <b>optimizing ML models</b> for scalability
-  </p>
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 </div>
 
-<!-- ANIMATED SEPARATOR -->
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-</p>
-
-<!-- TROPHY SECTION -->
-<h1 align="center">
-  <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30">
-  <span style="color:#FF073A">TROPHY SHOWCASE</span>
-  <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30">
-</h1>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Abhijeet-077&theme=radical&row=1&column=7&margin-w=15&margin-h=15" alt="Trophy" />
-</p>
-
-<!-- ANIMATED SEPARATOR -->
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-</p>
-
-<!-- GITHUB STATS SECTION WITH GRAPHS -->
-<h1 align="center">
-  <img src="https://media.giphy.com/media/3ohs4oWkjVcAYZamGY/giphy.gif" width="30">
-  <span style="color:#00FFFF">DEVELOPER ANALYTICS</span>
-  <img src="https://media.giphy.com/media/3ohs4oWkjVcAYZamGY/giphy.gif" width="30">
-</h1>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Abhijeet-077&theme=react-dark&hide_border=true&area=true" width="100%">
-</p>
-
+<!-- 🚀 ABOUT ME - FUTURISTIC PROFILE -->
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Abhijeet-077&show_icons=true&theme=radical&hide_border=true&title_color=FF073A&icon_color=00FFFF&text_color=FFFFFF&bg_color=0D1117" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Abhijeet-077&theme=radical&hide_border=true&background=0D1117&stroke=0D1117&ring=FF073A&fire=00FFFF&currStreakLabel=00FFFF&sideLabels=FF073A" />
+  <h1>
+    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35">
+    <span style="background: linear-gradient(45deg, #00FFFF, #FF073A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5em; font-weight: bold;">NEURAL ARCHITECT</span>
+    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35">
+  </h1>
 </div>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abhijeet-077&langs_count=6&layout=compact&theme=radical&hide_border=true&title_color=00FFFF&text_color=FFFFFF&bg_color=0D1117" width="50%" />
-</p>
-
-<!-- ANIMATED SEPARATOR -->
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-</p>
-
-<!-- SKILL RADAR -->
-<h1 align="center">
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30">
-  <span style="color:#FF073A">TECH SKILL RADAR</span>
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30">
-</h1>
-
 <div align="center">
-  <!-- PROGRAMMING LANGUAGES -->
-  <h3><img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> Programming Languages | Frameworks</h3>
-  <p>
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
-    <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R" />
-    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-    <img src="https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit Learn" />
-    <img src="https://img.shields.io/badge/XGBoost-4FBFA7?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost" />
-    <img src="https://img.shields.io/badge/CNN-3EDD87?style=for-the-badge&logo=tensorflow&logoColor=white" alt="CNN" />
-  </p>
-  
-  <!-- CLOUD & DEVOPS -->
-  <h3><img src="https://media.giphy.com/media/WFZvB7VIXBgiz3oDXE/giphy.gif" width="30"> Cloud & DevOps</h3>
-  <p>
-    <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
-    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure" />
-    <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="GCP" />
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-    <img src="https://img.shields.io/badge/CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="CI/CD" />
-    <img src="https://img.shields.io/badge/IBM_Watson-BE95FF?style=for-the-badge&logo=ibm&logoColor=white" alt="IBM Watson" />
-  </p>
-  
-  <!-- AI TOOLS -->
-  <h3><img src="https://media.giphy.com/media/9VtZplwCy9rK6tQOl7/giphy.gif" width="30"> AI Tools & Platforms</h3>
-  <p>
-    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
-    <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face" />
-    <img src="https://img.shields.io/badge/Llama-1A85FF?style=for-the-badge&logo=meta&logoColor=white" alt="Llama" />
-    <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Copilot" />
-    <img src="https://img.shields.io/badge/Cursor_AI-5143EC?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor AI" />
-    <img src="https://img.shields.io/badge/UiPath-FA4616?style=for-the-badge&logo=uipath&logoColor=white" alt="UiPath" />
-    <img src="https://img.shields.io/badge/Automation_Anywhere-35C5E5?style=for-the-badge&logo=automation-anywhere&logoColor=white" alt="Automation Anywhere" />
-  </p>
+  <table>
+    <tr>
+      <td width="50%">
+        <img align="center" height="300px" width="400px" alt="Coding Animation" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExczc2anJvOW8xbXJ2aHV6NHV1cDJvY2I5cHhiNTkzMHlnbGlod2Q0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVik7pBtu9dNS/giphy.gif" />
+      </td>
+      <td width="50%">
+        <div align="left" style="padding: 20px;">
+          <h3 style="color: #00FFFF; font-family: 'Orbitron', monospace;">🧬 SYSTEM SPECIFICATIONS</h3>
+
+          <p style="font-family: 'JetBrains Mono', monospace; line-height: 1.8;">
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Core Function:</strong> AI & ML Engineer<br>
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Education Module:</strong> B-Tech CSE (AI & ML)<br>
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Institution:</strong> JC Bose University<br>
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Specialization:</strong> Python | GenAI | Cloud<br>
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Achievement Level:</strong> Hackathon Winner 🏆<br>
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Current Mission:</strong> Blockchain & IoT Integration<br>
+            <span style="color: #FF073A; font-weight: bold;">▶</span> <strong>Optimization Focus:</strong> ML Model Scalability
+          </p>
+
+          <div style="margin-top: 20px;">
+            <img src="https://img.shields.io/badge/Status-Online-00FF00?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status"/>
+            <img src="https://img.shields.io/badge/Mode-Innovation-FF073A?style=for-the-badge&logo=rocket&logoColor=white" alt="Mode"/>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
 
-<!-- ANIMATED SEPARATOR -->
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-</p>
+<!-- 🏆 ACHIEVEMENT MATRIX -->
+<div align="center">
+  <h2 style="color: #FF073A; font-family: 'Orbitron', monospace;">
+    🏆 ACHIEVEMENT MATRIX 🏆
+  </h2>
+  <img src="https://github-profile-trophy.vercel.app/?username=Abhijeet-077&theme=radical&row=2&column=4&margin-w=15&margin-h=15&no-frame=true" alt="GitHub Trophies" />
+</div>
+
+<!-- 🔥 NEON SEPARATOR -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+</div>
+
+<!-- 📊 ENHANCED DEVELOPER ANALYTICS -->
+<div align="center">
+  <h2 style="background: linear-gradient(45deg, #00FFFF, #FF073A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2em; font-family: 'Orbitron', monospace;">
+    📊 NEURAL NETWORK ANALYTICS
+  </h2>
+</div>
+
+<!-- Activity Graph -->
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Abhijeet-077&theme=react-dark&hide_border=true&area=true&custom_title=Code%20Contribution%20Neural%20Network" width="100%">
+</div>
+
+<!-- Stats Grid -->
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%">
+        <img src="https://github-readme-stats.vercel.app/api?username=Abhijeet-077&show_icons=true&theme=radical&hide_border=true&title_color=FF073A&icon_color=00FFFF&text_color=FFFFFF&bg_color=0D1117&custom_title=System%20Performance%20Metrics" />
+      </td>
+      <td width="50%">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhijeet-077&theme=radical&hide_border=true&background=0D1117&stroke=0D1117&ring=FF073A&fire=00FFFF&currStreakLabel=00FFFF&sideLabels=FF073A" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abhijeet-077&langs_count=8&layout=compact&theme=radical&hide_border=true&title_color=00FFFF&text_color=FFFFFF&bg_color=0D1117&custom_title=Programming%20Language%20Distribution" width="60%" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 🔥 NEON SEPARATOR -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+</div>
+
+<!-- 🛠️ NEURAL TECH STACK -->
+<div align="center">
+  <h2 style="background: linear-gradient(45deg, #FF073A, #00FFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2em; font-family: 'Orbitron', monospace;">
+    🛠️ NEURAL TECH STACK
+  </h2>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="33%" align="center">
+        <h3 style="color: #00FFFF; font-family: 'JetBrains Mono', monospace;">
+          🧠 AI/ML CORE
+        </h3>
+        <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn&theme=dark" alt="AI/ML Stack" /><br>
+        <img src="https://img.shields.io/badge/XGBoost-4FBFA7?style=flat-square&logo=xgboost&logoColor=white" alt="XGBoost" />
+        <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
+        <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
+      </td>
+      <td width="33%" align="center">
+        <h3 style="color: #FF073A; font-family: 'JetBrains Mono', monospace;">
+          ☁️ CLOUD MATRIX
+        </h3>
+        <img src="https://skillicons.dev/icons?i=aws,azure,gcp,docker&theme=dark" alt="Cloud Stack" /><br>
+        <img src="https://img.shields.io/badge/IBM_Watson-BE95FF?style=flat-square&logo=ibm&logoColor=white" alt="IBM Watson" />
+        <img src="https://img.shields.io/badge/CI/CD-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="CI/CD" />
+        <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+      </td>
+      <td width="33%" align="center">
+        <h3 style="color: #9400D3; font-family: 'JetBrains Mono', monospace;">
+          🔧 DEV ARSENAL
+        </h3>
+        <img src="https://skillicons.dev/icons?i=git,github,vscode,linux&theme=dark" alt="Dev Tools" /><br>
+        <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=flat-square&logo=github&logoColor=white" alt="GitHub Copilot" />
+        <img src="https://img.shields.io/badge/Cursor_AI-5143EC?style=flat-square&logo=cursor&logoColor=white" alt="Cursor AI" />
+        <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 🎯 SKILL PROFICIENCY RADAR -->
+<div align="center">
+  <h3 style="color: #00FFFF; font-family: 'Orbitron', monospace;">⚡ SKILL PROFICIENCY MATRIX</h3>
+
+  <table>
+    <tr>
+      <td align="center">
+        <strong style="color: #FF073A;">Machine Learning</strong><br>
+        <progress value="95" max="100" style="width: 200px; height: 20px;"></progress><br>
+        <span style="color: #00FFFF; font-family: monospace;">95%</span>
+      </td>
+      <td align="center">
+        <strong style="color: #FF073A;">Python Development</strong><br>
+        <progress value="90" max="100" style="width: 200px; height: 20px;"></progress><br>
+        <span style="color: #00FFFF; font-family: monospace;">90%</span>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <strong style="color: #FF073A;">Cloud Architecture</strong><br>
+        <progress value="85" max="100" style="width: 200px; height: 20px;"></progress><br>
+        <span style="color: #00FFFF; font-family: monospace;">85%</span>
+      </td>
+      <td align="center">
+        <strong style="color: #FF073A;">GenAI & LLMs</strong><br>
+        <progress value="88" max="100" style="width: 200px; height: 20px;"></progress><br>
+        <span style="color: #00FFFF; font-family: monospace;">88%</span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 🔥 NEON SEPARATOR -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+</div>
 
 <!-- PROJECT SHOWCASE SECTION - GLOWING CARDS -->
 <h1 align="center">
@@ -380,5 +561,5 @@
   <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
-*Last updated: 2025-08-03 09:35:39 UTC*
+*Last updated: 2025-08-03 15:20:00 UTC*
 <!-- GITHUB-STATS:END -->
