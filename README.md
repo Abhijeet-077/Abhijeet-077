@@ -3,126 +3,57 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=ABHIJEET%20SWAMI&fontSize=42&fontColor=00FFFF&animation=twinkling&fontAlignY=32&desc=AI%20%7C%20ML%20%7C%20CODE%20ARCHITECT&descAlignY=51&descAlign=50"/>
 </div>
 
-<!-- 🎮 DEBUG FIGHTER - ANIMATED BATTLE SCENE -->
+<!-- 🎮 DEBUG FIGHTER - BATTLE VISUALIZATION -->
 <div align="center">
   <h2>🛩️ DEBUG FIGHTER - ELIMINATING CODE BUGS! 🐛</h2>
-  <p><em>Watch the airplane hunt down and eliminate different types of code bugs!</em></p>
+  <p><em>Automated bug elimination system in action!</em></p>
 
-  <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background -->
-    <defs>
-      <radialGradient id="spaceGradient" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
-      </radialGradient>
-    </defs>
-    <rect width="800" height="400" fill="url(#spaceGradient)" stroke="#00FFFF" stroke-width="2" rx="15"/>
+  <!-- Battle Scene Visualization -->
+  <table>
+    <tr>
+      <td align="center" width="20%">
+        <h3>🛩️ FIGHTER</h3>
+        <p style="font-size: 3em;">✈️</p>
+        <p><strong>Debug Hunter</strong></p>
+        <p>Status: <span style="color: green;">ACTIVE</span></p>
+      </td>
+      <td align="center" width="20%">
+        <h3>⚡ LASER</h3>
+        <p style="font-size: 3em;">💥</p>
+        <p><strong>Targeting System</strong></p>
+        <p>Mode: <span style="color: cyan;">PRECISION</span></p>
+      </td>
+      <td align="center" width="20%">
+        <h3>🐛 SYNTAX</h3>
+        <p style="font-size: 3em;">🔴</p>
+        <p><strong>Error Bug</strong></p>
+        <p>Status: <span style="color: red;">ELIMINATED</span></p>
+      </td>
+      <td align="center" width="20%">
+        <h3>🐛 LOGIC</h3>
+        <p style="font-size: 3em;">🟠</p>
+        <p><strong>Error Bug</strong></p>
+        <p>Status: <span style="color: orange;">ELIMINATED</span></p>
+      </td>
+      <td align="center" width="20%">
+        <h3>🐛 RUNTIME</h3>
+        <p style="font-size: 3em;">🟣</p>
+        <p><strong>Error Bug</strong></p>
+        <p>Status: <span style="color: purple;">ELIMINATED</span></p>
+      </td>
+    </tr>
+  </table>
 
-    <!-- Animated Background Stars -->
-    <circle cx="100" cy="50" r="1" fill="#FFFFFF" opacity="0.8">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="200" cy="80" r="1" fill="#FFFFFF" opacity="0.6">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="300" cy="40" r="1" fill="#FFFFFF" opacity="0.7">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="500" cy="70" r="1" fill="#FFFFFF" opacity="0.9">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="650" cy="60" r="1" fill="#FFFFFF" opacity="0.5">
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="750" cy="90" r="1" fill="#FFFFFF" opacity="0.8">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Airplane (Debug Hunter) -->
-    <g>
-      <polygon points="50,200 90,210 85,200 90,190" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="2s" repeatCount="indefinite"/>
-      </polygon>
-      <circle cx="95" cy="200" r="3" fill="#FF073A">
-        <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Airplane Trail -->
-      <line x1="40" y1="200" x2="20" y2="200" stroke="#00FFFF" stroke-width="2" opacity="0.6">
-        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
-      </line>
-    </g>
-
-    <!-- Laser Beams (Animated) -->
-    <line x1="95" y1="200" x2="580" y2="100" stroke="#00FFFF" stroke-width="3" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="1s" repeatCount="indefinite"/>
-    </line>
-    <line x1="95" y1="200" x2="480" y2="300" stroke="#00FFFF" stroke-width="3" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="3s" repeatCount="indefinite"/>
-    </line>
-    <line x1="95" y1="200" x2="680" y2="250" stroke="#00FFFF" stroke-width="3" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="5s" repeatCount="indefinite"/>
-    </line>
-
-    <!-- Bug 1: Syntax Error (Red) -->
-    <g>
-      <circle cx="600" cy="100" r="15" fill="#FF073A" opacity="0.8">
-        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0,0; -20,10; 0,0; 20,-10; 0,0" dur="4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.5s" begin="1s" repeatCount="1"/>
-      </circle>
-      <text x="600" y="105" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">SYN</text>
-      <!-- Bug Wings -->
-      <ellipse cx="588" cy="92" rx="8" ry="3" fill="#FF073A" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0 588 92;15 588 92;0 588 92;-15 588 92;0 588 92" dur="0.5s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="612" cy="92" rx="8" ry="3" fill="#FF073A" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0 612 92;-15 612 92;0 612 92;15 612 92;0 612 92" dur="0.5s" repeatCount="indefinite"/>
-      </ellipse>
-    </g>
-
-    <!-- Bug 2: Logic Error (Orange) -->
-    <g>
-      <circle cx="500" cy="300" r="15" fill="#FFA500" opacity="0.8">
-        <animate attributeName="r" values="12;18;12" dur="2.5s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0,0; 30,-15; 0,0; -30,15; 0,0" dur="5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.5s" begin="3s" repeatCount="1"/>
-      </circle>
-      <text x="500" y="305" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">LOG</text>
-      <!-- Bug Wings -->
-      <ellipse cx="488" cy="292" rx="8" ry="3" fill="#FFA500" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0 488 292;15 488 292;0 488 292;-15 488 292;0 488 292" dur="0.6s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="512" cy="292" rx="8" ry="3" fill="#FFA500" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0 512 292;-15 512 292;0 512 292;15 512 292;0 512 292" dur="0.6s" repeatCount="indefinite"/>
-      </ellipse>
-    </g>
-
-    <!-- Bug 3: Runtime Error (Purple) -->
-    <g>
-      <circle cx="700" cy="250" r="15" fill="#9400D3" opacity="0.8">
-        <animate attributeName="r" values="12;18;12" dur="1.8s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0,0; -25,20; 0,0; 25,-20; 0,0" dur="3.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.5s" begin="5s" repeatCount="1"/>
-      </circle>
-      <text x="700" y="255" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="monospace">RUN</text>
-      <!-- Bug Wings -->
-      <ellipse cx="688" cy="242" rx="8" ry="3" fill="#9400D3" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0 688 242;15 688 242;0 688 242;-15 688 242;0 688 242" dur="0.4s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="712" cy="242" rx="8" ry="3" fill="#9400D3" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" values="0 712 242;-15 712 242;0 712 242;15 712 242;0 712 242" dur="0.4s" repeatCount="indefinite"/>
-      </ellipse>
-    </g>
-
-    <!-- Status Display -->
-    <rect x="10" y="10" width="150" height="60" fill="#000000" stroke="#00FFFF" stroke-width="2" rx="5" opacity="0.8"/>
-    <text x="20" y="30" fill="#00FFFF" font-size="12" font-family="monospace">DEBUG STATUS:</text>
-    <text x="20" y="45" fill="#FF073A" font-size="11" font-family="monospace">🎯 HUNTING BUGS...</text>
-    <text x="20" y="60" fill="#00FF00" font-size="11" font-family="monospace">✅ SYSTEM ACTIVE</text>
-
-    <!-- Mission Info -->
-    <text x="400" y="380" text-anchor="middle" fill="#00FFFF" font-size="14" font-family="monospace">🚀 Automated Bug Elimination in Progress...</text>
-  </svg>
+  <!-- Mission Status -->
+  <div style="border: 2px solid #00FFFF; border-radius: 10px; padding: 20px; margin: 20px; background-color: #0a0a0a;">
+    <h3 style="color: #00FFFF;">🎯 MISSION STATUS</h3>
+    <p style="color: #FFFFFF;">
+      <strong>Operation:</strong> Automated Bug Elimination<br>
+      <strong>Target Types:</strong> Syntax | Logic | Runtime Errors<br>
+      <strong>Elimination Rate:</strong> 99.7% Success<br>
+      <strong>System Status:</strong> <span style="color: #00FF00;">FULLY OPERATIONAL</span>
+    </p>
+  </div>
 
   <p align="center">
     <img src="https://img.shields.io/badge/Mission-Debug%20Fighter-FF073A?style=for-the-badge&logo=target&logoColor=white" alt="Mission"/>
@@ -629,5 +560,5 @@
   <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
-*Last updated: 2025-08-03 15:34:38 UTC*
+*Last updated: 2025-08-03 15:54:54 UTC*
 <!-- GITHUB-STATS:END -->
