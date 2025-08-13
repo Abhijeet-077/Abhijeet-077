@@ -460,20 +460,20 @@
 ## 📊 GitHub Statistics
 
 ### Quick Stats
-- 📝 **29** Public Repositories
-- ⭐ **29** Total Repositories
+- 📝 **28** Public Repositories
+- ⭐ **28** Total Repositories
 - 👥 **2** Followers
 - 👤 **1** Following
 
 ### 🚀 Recent Projects
-- **[Abhijeet-077](https://github.com/Abhijeet-077/Abhijeet-077)** (Python) - No description available *Updated: 2025-08-12*
-- **[Linkedin-Agent](https://github.com/Abhijeet-077/Linkedin-Agent)** (None) - No description available *Updated: 2025-08-12*
+- **[Abhijeet-077](https://github.com/Abhijeet-077/Abhijeet-077)** (Python) - No description available *Updated: 2025-08-13*
 - **[Trade-Analysis-bot](https://github.com/Abhijeet-077/Trade-Analysis-bot)** (JavaScript) - No description available *Updated: 2025-07-31*
+- **[Amlgo-chatbot-assignment](https://github.com/Abhijeet-077/Amlgo-chatbot-assignment)** (Python) - No description available *Updated: 2025-07-31*
 
 ### 🐍 Contribution Snake
 <div align="center">
   <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
-*Last updated: 2025-08-13 08:34:44 UTC*
+*Last updated: 2025-08-13 20:28:24 UTC*
 <!-- GITHUB-STATS:END -->
