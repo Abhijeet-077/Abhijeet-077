@@ -460,20 +460,20 @@
 ## 📊 GitHub Statistics
 
 ### Quick Stats
-- 📝 **31** Public Repositories
-- ⭐ **31** Total Repositories
+- 📝 **30** Public Repositories
+- ⭐ **30** Total Repositories
 - 👥 **3** Followers
 - 👤 **1** Following
 
 ### 🚀 Recent Projects
 - **[Abhijeet-077](https://github.com/Abhijeet-077/Abhijeet-077)** (Python) - No description available *Updated: 2025-09-02*
 - **[Query-AI-Agent](https://github.com/Abhijeet-077/Query-AI-Agent)** (HTML) - This is an AI agent that parse the Document and find out the Data and verfies with the company data  *Updated: 2025-08-15*
-- **[Query-Managment-AI-agent](https://github.com/Abhijeet-077/Query-Managment-AI-agent)** (Python) - No description available *Updated: 2025-08-15*
+- **[Linkedin-Auto-Agent](https://github.com/Abhijeet-077/Linkedin-Auto-Agent)** (TypeScript) - No description available *Updated: 2025-08-14*
 
 ### 🐍 Contribution Snake
 <div align="center">
   <img src="github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
-*Last updated: 2025-09-02 20:23:05 UTC*
+*Last updated: 2025-09-03 08:30:16 UTC*
 <!-- GITHUB-STATS:END -->
